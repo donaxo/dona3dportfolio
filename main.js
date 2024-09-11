@@ -2,12 +2,12 @@ import './style.css';
 import * as THREE from 'three';
 import * as dat from 'dat.gui';
 import gsap from 'gsap';
-import Stats from 'three/addons/libs/stats.module.js';
-import { OrbitControls } from 'three/addons/controls/OrbitControls';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
-import { FontLoader } from 'three/addons/loaders/FontLoader.js';
-import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
+import Stats from 'three/examples/jsm/libs/stats.module.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js';
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js';
 
 // VARIABLES
 let theme = 'light';
@@ -28,23 +28,23 @@ let clipNames = [
 ];
 let projects = [
   {
-    image: 'textures/toastwolrd.png',
+    image: 'public/textures/toastwolrd.png',
     url: 'https://toastwolrd.bigcartel.com/',
   },
   {
-    image: 'textures/nouri.png',
+    image: 'public/textures/nouri.png',
     url: 'https://uxfol.io/p/386305e4/0262f760',
   },
   {
-    image: 'textures/bobcat.png',
+    image: 'public/textures/bobcat.png',
     url: 'https://www.youtube.com/watch?v=NS2l5GU-WiE',
   },
   {
-    image: 'textures/universal.png',
+    image: 'public/textures/universal.png',
     url: 'https://www.youtube.com/watch?v=BUValS_grGI',
   },
   {
-    image: 'textures/designprocess.png',
+    image: 'public/textures/designprocess.png',
     url: 'https://drive.google.com/file/d/1vKdFv6T0pnTZAwez6n1UlJqkwGxORcsK/view',
   },
 ];
@@ -129,7 +129,7 @@ gltfLoader.load(
 
     // load video
     const video = document.createElement('video');
-    video.src = 'textures/cybersite.mov';
+    video.src = 'public/textures/cybersite.mov';
     video.muted = true;
     video.playsInline = true;
     video.autoplay = true;
@@ -191,7 +191,7 @@ gltfLoader.load(
 
         // adding texture to book
         const bookTexture = new THREE.TextureLoader().load(
-          'textures/Design101.png' 
+          'public/textures/Design101.png' 
         );
         bookTexture.flipY = false;
         child.material = new THREE.MeshStandardMaterial({
